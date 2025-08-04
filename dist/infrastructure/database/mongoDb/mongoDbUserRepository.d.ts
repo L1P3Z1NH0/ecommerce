@@ -1,0 +1,12 @@
+import { User } from '../../../domain/entities/User.js';
+import type { IUserRepository } from '../../../domain/repositories/IUserRepository.js';
+export declare class MongoDbUserRepository implements IUserRepository {
+    private getCollection;
+    create(user: User): Promise<User>;
+    findByEmail(email: string): Promise<User | null>;
+    findById(id: string): Promise<User | null>;
+    update(user: User): Promise<User>;
+    delete(id: string): Promise<boolean>;
+    private mapToUser;
+}
+//# sourceMappingURL=mongoDbUserRepository.d.ts.map
