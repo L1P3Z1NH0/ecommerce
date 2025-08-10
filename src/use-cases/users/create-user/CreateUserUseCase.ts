@@ -1,9 +1,9 @@
 import { hash } from 'bcrypt';
 
-import type { User } from '../../domain/entities/User';
-import type { IMongoRepository } from '../../domain/repositories/IUserRepository';
-import type { CreateUserDTO } from '../../use-cases/create-user/CreateUserDTO';
-import { BadRequestError, ConflictError } from '../../presentation/http/HttpError';
+import { BadRequestError, ConflictError } from '../../../presentation/http/HttpError';
+import type { CreateUserDTO } from './CreateUserDTO';
+import type { User } from '../../../domain/entities/User';
+import type { IMongoRepository } from '../../../domain/repositories/IUserRepository';
 
 export class CreateUserUseCase {
   constructor(private userRepository: IMongoRepository<User>) { }

@@ -1,4 +1,4 @@
-import type { UserGender } from "../../domain/entities/User";
+import type { UserGender } from "../../../domain/entities/User";
 
 export interface CreateUserDTO {
   name: string;

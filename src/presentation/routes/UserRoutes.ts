@@ -1,9 +1,9 @@
 import { Router } from 'express';
 import { UserController } from '../../presentation/controllers/UserController';
-import { CreateUserUseCase } from '../../use-cases/create-user/CreateUserUseCase';
+import { CreateUserUseCase } from '../../use-cases/users/create-user/CreateUserUseCase';
 import { MongoDbUserRepository } from '../../infrastructure/database/mongoDb/mongoDbUserRepository';
-import { FindUserUseCase } from '../../use-cases/find-user/FindUserUseCase';
-import { FindUsersUseCase } from '../../use-cases/find-users/FindUsersUseCase';
+import { FindUserUseCase } from '../../use-cases/users/find-user/FindUserUseCase';
+import { FindUsersUseCase } from '../../use-cases/users/find-users/FindUsersUseCase';
 
 export const userRoutes = Router();
 

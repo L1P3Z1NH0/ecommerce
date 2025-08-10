@@ -15,7 +15,6 @@ class App {
     this.app = express();
     this.middlewares();
     this.routes();
-    this.errorHandler();
   }
 
   private middlewares(): void {
@@ -30,13 +29,6 @@ class App {
     // Health check endpoint
     this.app.get('/health', (req: Request, res: Response) => {
       res.status(200).json({ status: 'ok' });
-    });
-  }
-
-  private errorHandler(): void {
-    this.app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-      console.error(err.stack);
-      res.status(500).json({ error: 'Internal Server Error' });
     });
   }
 

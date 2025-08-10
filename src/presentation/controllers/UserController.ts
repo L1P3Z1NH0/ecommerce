@@ -1,9 +1,9 @@
 import type { Request, Response } from 'express';
 
-import { CreateUserUseCase } from '../../use-cases/create-user/CreateUserUseCase';
-import { FindUserUseCase } from '../../use-cases/find-user/FindUserUseCase';
+import { CreateUserUseCase } from '../../use-cases/users/create-user/CreateUserUseCase';
+import { FindUserUseCase } from '../../use-cases/users/find-user/FindUserUseCase';
 import { HttpResponse } from '../../presentation/http/HttpResponse';
-import { FindUsersUseCase } from '../../use-cases/find-users/FindUsersUseCase';
+import { FindUsersUseCase } from '../../use-cases/users/find-users/FindUsersUseCase';
 
 export class UserController {
   constructor(private useCases: { createUserUseCase: CreateUserUseCase, findUserUseCase: FindUserUseCase, findUsersUseCase: FindUsersUseCase }) { }

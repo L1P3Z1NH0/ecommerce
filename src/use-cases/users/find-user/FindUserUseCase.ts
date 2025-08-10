@@ -1,6 +1,6 @@
-import { User } from "../../domain/entities/User";
-import { IMongoRepository } from "../../domain/repositories/IUserRepository";
-import { NotFoundError } from "../../presentation/http/HttpError";
+import { User } from "../../../domain/entities/User";
+import { IMongoRepository } from "../../../domain/repositories/IUserRepository";
+import { NotFoundError } from "../../../presentation/http/HttpError";
 
 export class FindUserUseCase {
     constructor(private userRepository: IMongoRepository<User>) { }
